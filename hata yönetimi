@@ -1,0 +1,46 @@
+static void Main(string[] args)
+        {
+           // try
+           // {
+           //      Console.WriteLine("bir sayı giriniz:");
+       // int sayi1=Convert.ToInt32(Console.ReadLine());
+        //Console.WriteLine("girmiş olduğunuz sayı:"+ sayi1);
+//
+       //     }
+       //     catch (Exception ex)
+       //     {
+       //         Console.WriteLine("Hata:"+ ex.Message.ToString());
+//
+       //     }
+       //     finally
+       //     {
+       //         Console.Write("işlem tamamlandi.");
+//
+         //   } 
+            try
+            {
+                //int a=int.Parse(null);
+               // int a=int.Parse("test");
+                int a=int.Parse("-20000000000");
+
+
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("boş deger girdiniz:");
+                Console.WriteLine(ex);
+            }
+             catch (FormatException ex)
+            {
+                Console.WriteLine("veri tipine uygun değil:");
+                Console.WriteLine(ex);
+            }
+            catch (OverflowException ex)
+            {
+                Console.WriteLine("çok küçük yada çok büyük deger girdiniz:");
+                Console.WriteLine(ex);
+            }
+            finally{
+                Console.WriteLine( "işlem başarıyla tamamlandı.");
+            }
+        }
